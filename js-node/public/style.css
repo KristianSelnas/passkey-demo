@@ -1,0 +1,318 @@
+:root {
+  font-size: 62.5%;
+
+  --spacing-1: 0.8rem;
+  --spacing-2: 1.6rem;
+  --spacing-3: 2.4rem;
+  --spacing-4: 3.2rem;
+  --spacing-5: 4rem;
+  --spacing-6: 4.8rem;
+  --spacing-8: 6.4rem;
+
+  --font-size-xs: 1.2rem;
+  --font-size-sm: 1.4rem;
+  --font-size-base: 1.6rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.4rem;
+
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  --color-bg-success: #064e3b;
+  --color-bg-error: #7f1d1d;
+  --color-bg-info: #312e81;
+
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-heading: #f1f5f9;
+
+  --color-border-primary: #475569;
+  --color-border-secondary: #334155;
+  --color-border-success: #065f46;
+  --color-border-error: #991b1b;
+  --color-border-info: #3730a3;
+
+  --color-brand-primary: #6366f1;
+  --color-brand-primary-hover: #4f46e5;
+  --color-brand-light: #818cf8;
+  --color-brand-lighter: #a5b4fc;
+
+  --color-success: #6ee7b7;
+  --color-error: #fca5a5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--font-size-base);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.4);
+  padding: var(--spacing-5);
+  margin: var(--spacing-2);
+  width: 40rem;
+  border: 1px solid var(--color-border-secondary);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-heading);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-2);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-brand-light);
+  box-shadow: 0 0 0 0.3rem rgba(129, 140, 248, 0.2);
+}
+
+input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+button {
+  flex: 1;
+  padding: var(--spacing-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-brand-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-brand-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-primary);
+}
+
+.btn-secondary:hover {
+  background: #3e4c63;
+}
+
+#status {
+  margin-top: var(--spacing-3);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  display: none;
+}
+
+#status.success {
+  display: block;
+  background: var(--color-bg-success);
+  color: var(--color-success);
+  border: 1px solid var(--color-border-success);
+}
+
+#status.success a {
+  color: white;
+  text-decoration: none;
+}
+
+#status.success a:hover {
+  text-decoration: underline;
+}
+
+#status.error {
+  display: block;
+  background: var(--color-bg-error);
+  color: var(--color-error);
+  border: 1px solid var(--color-border-error);
+}
+
+#status.info {
+  display: block;
+  background: var(--color-bg-info);
+  color: var(--color-brand-lighter);
+  border: 1px solid var(--color-border-info);
+}
+
+.logged-in {
+  text-align: center;
+}
+
+.logged-in h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-1);
+  color: var(--color-text-heading);
+}
+
+.logged-in p {
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-3);
+}
+
+.register-link {
+  text-align: center;
+  margin-top: var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.register-link a {
+  color: var(--color-brand-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  color: var(--color-brand-lighter);
+  text-decoration: underline;
+}
+
+.passkeys-section {
+  margin: var(--spacing-3) 0;
+}
+
+.passkeys-section h3 {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+#passkeys-list {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2);
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.passkey-item {
+  padding: var(--spacing-2);
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.passkey-item:last-child {
+  border-bottom: none;
+}
+
+.passkey-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.passkey-info strong {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.passkey-id,
+.passkey-counter,
+.passkey-transports {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.passkey-id {
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.no-passkeys {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--spacing-3);
+}
+
+.demo-ribbon {
+  position: fixed;
+  top: var(--spacing-6);
+  right: -4.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-brand-primary) 0%,
+    var(--color-brand-primary-hover) 100%
+  );
+  color: white;
+  padding: var(--spacing-1) var(--spacing-8);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transform: rotate(45deg);
+  box-shadow: 0 0.2rem 1rem rgba(99, 102, 241, 0.3);
+  z-index: 1000;
+  opacity: 0.7;
+}

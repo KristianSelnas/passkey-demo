@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passkey Demo - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Velkommen, <span id="display-name"></span>!</h1>
+      <p class="subtitle">Du er logget inn med en passkey.</p>
+
+      <div class="passkeys-section">
+        <h3>Dine passkeys</h3>
+        <div id="passkeys-list"></div>
+      </div>
+
+      <button class="btn-secondary" onclick="logout()">Logg ut</button>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>

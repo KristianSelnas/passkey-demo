@@ -1,0 +1,13 @@
+{
+  "name": "passkey-login-demo",
+  "version": "1.0.0",
+  "description": "Passkey login demo for presentation",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "@simplewebauthn/server": "^11.0.0"
+  }
+}
