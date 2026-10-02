@@ -1,0 +1,20 @@
+# Backend build artifacts
+backend/target/
+
+# Node
+node_modules/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# Claude
+.claude/settings.local.json
